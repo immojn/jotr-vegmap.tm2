@@ -9,12 +9,12 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -115.9994
-  - 33.987
-  - 16
+  - -116.1832
+  - 33.9771
+  - 12
 description: ''
 format: "png8:m=h"
-interactivity_layer: ''
+interactivity_layer: vegetation
 layers: null
 maxzoom: 16
 minzoom: 11
@@ -22,4 +22,4 @@ name: jotr-vegmap
 source: "mapbox:///ryanjhodge.vbowjvhy"
 styles: 
   - style.mss
-template: ''
+template: "{{MapUnit_Na}}"
