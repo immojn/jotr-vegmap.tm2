@@ -3,27 +3,460 @@
 <Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="rgba(0, 0, 0, 0)">
 
 <Parameters>
+  <Parameter name="attribution"><![CDATA[National Park Service]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-116.1832,33.9771,12</Parameter>
-  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="center">-116.1847,33.9406,14</Parameter>
+  <Parameter name="description"><![CDATA[Joshua Tree National Park Vegetation Map]]></Parameter>
+  <Parameter name="format">png8:m=h:c=32</Parameter>
   <Parameter name="interactivity_layer">vegetation</Parameter>
-  <Parameter name="interactivity_fields">MapUnit_Na</Parameter>
+  <Parameter name="interactivity_fields">class,macrogroup,mapunit_name</Parameter>
   <Parameter name="maxzoom">16</Parameter>
   <Parameter name="minzoom">11</Parameter>
-  <Parameter name="name"><![CDATA[jotr-vegmap]]></Parameter>
-  <Parameter name="source"><![CDATA[mapbox:///ryanjhodge.vbowjvhy]]></Parameter>
-  <Parameter name="template"><![CDATA[{{MapUnit_Na}}]]></Parameter>
+  <Parameter name="name"><![CDATA[Joshua Tree National Park Vegetation Map]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///ryanjhodge.wnfgk3xr]]></Parameter>
+  <Parameter name="template"><![CDATA[<b>Class:</b> {{class}}<br /><b>Macrogroup:</b> {{macrogroup}}<br /><b>Association:</b> {{mapunit_name}}]]></Parameter>
 </Parameters>
 
 
+<Style name="vegetation-alliance" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Water')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Rock Outcrops')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Playa')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Non-vegetated Habitat (less than 2% absolute cover)')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Dunes')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Disturbed / Built-up')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Desert Twinbugs - Desert Sand Verbena Sparsely Vegetated Alliance (Desert Dunes and Sand Flats)')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Desert Gold - Spiny Herb Desert Pavement Annual Herbaceous Alliance')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Smoketree / Desert Lavender - Catclaw Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Ironwood Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Honey Mesquite Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Honey Mesquite / Saltbush - Bush Seepweed Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Desert Willow Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Desert Lavender Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Desert Almond Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Chuparosa Provisional Shrubland Alliance')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Catclaw Acacia - Desert Almond Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Catclaw Acacia - California Buckwheat Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Catclaw Acacia - (Sweetbush - Desert Lavender) Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Blue Palo Verde / Desert Lavender Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Blue Palo Verde / Creosote Bush - Desert Fir Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Blue Palo Verde - Ironwood / Desert Lavender Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Blue Palo Verde - Ironwood / Cholla Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Teddy-Bear Cholla Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Mojave Yucca / Big Galleta Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Mojave Yucca - Creosote Bush - White Bursage Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Mojave Yucca - Blackbush Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Joshua Tree Woodland Alliance')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Joshua Tree / Desert Almond Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Joshua Tree / Creosote Bush - Mojave Yucca / Big Galleta Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Joshua Tree / Blackbush Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Joshua Tree / Big Galleta Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Joshua Tree - California Juniper / Nevada Ephedra Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Hall\'s Tetracoccus Provisional Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Desert Sunflower - White Bursage - Jojoba Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Desert Sunflower - California Buckwheat - Jojoba Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush / Big Galleta Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - White Bursage Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - White Bursage - White Rhatany Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - White Bursage - Ocotillo Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - White Bursage - Mojave Yucca Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - White Bursage - Jojoba Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - White Bursage - Indigo Bush Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - White Bursage - Desert Senna Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - Desert Holly Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - Brittlebush - White Bursage Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - Brittlebush - Ocotillo Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Creosote Bush - Brittlebush - Arrowleaf Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Cheesebush Shrubland Alliance')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'California Juniper Woodland Alliance')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'California Juniper / Muller Oak - Blackbush Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'California Juniper / Mojave Yucca / Big Galleta Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'California Juniper / Blackbush Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Brittlebush - White Bursage Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Blackbush - Nevada Ephedra Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Big Galleta / White Bursage Herbaceous Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Big Galleta / Four-Wing Saltbush Herbaceous Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Four-Wing Saltbush Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Rubber Rabbitbrush Shrubland Alliance')</Filter>
+    <PolygonSymbolizer fill="#a52a2a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Muller Oak - California Buckwheat - Narrowleaf Goldenbush Shrubland Association')</Filter>
+    <PolygonSymbolizer fill="#ffff00" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Red Brome - Mediterranean Grass Semi-Natural Herbaceous Stands')</Filter>
+    <PolygonSymbolizer fill="#ffff00" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'California Fan Palm Woodland Alliance')</Filter>
+    <PolygonSymbolizer fill="#008000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Fremont Cottonwood Forest Alliance')</Filter>
+    <PolygonSymbolizer fill="#008000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Black Willow Woodland Alliance')</Filter>
+    <PolygonSymbolizer fill="#008000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Singleleaf Pinyon Woodland Alliance ')</Filter>
+    <PolygonSymbolizer fill="#008000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([mapunit_name] = 'Singleleaf Pinyon / Muller Oak Woodland Association')</Filter>
+    <PolygonSymbolizer fill="#008000" />
+  </Rule>
+</Style>
+<Style name="vegetation-macrogroup" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'North American Warm Semi-Desert Cliff, Scree &amp; Rock Vegetation')</Filter>
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'North American Warm-Desert Xero-Riparian')</Filter>
+    <PolygonSymbolizer fill="#80cdc1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'Mojave-Sonoran Semi-Desert Scrub')</Filter>
+    <PolygonSymbolizer fill="#8c510a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'Great Basin Saltbrush Scrub')</Filter>
+    <PolygonSymbolizer fill="#bf812d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'Great Basin and Intermountain Semi-Desert Shrubland &amp; Steppe')</Filter>
+    <PolygonSymbolizer fill="#dfc27d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'California Chaparral')</Filter>
+    <PolygonSymbolizer fill="#dddd00" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'California Annual &amp; Perennial Grassland')</Filter>
+    <PolygonSymbolizer fill="#ffff88" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'Warm Mediterranean &amp; Desert Riparian, Flooded &amp; Swamp Forest')</Filter>
+    <PolygonSymbolizer fill="#bef5cc" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([macrogroup] = 'Intermountain Singleleaf Pinyon-Western Juniper Woodland')</Filter>
+    <PolygonSymbolizer fill="#168d35" />
+  </Rule>
+</Style>
+<Style name="vegetation-class" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = '6 Nonvascular &amp; Sparse Vascular Rock Vegetation')</Filter>
+    <LineSymbolizer stroke-width="0.25" />
+    <PolygonSymbolizer fill="#737373" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = '3 Xeromorphic Scrub &amp; Herb Vegetation (Semi-Desert)')</Filter>
+    <LineSymbolizer stroke-width="0.25" />
+    <PolygonSymbolizer fill="#8c510a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = '2 Shrubland &amp; Grassland')</Filter>
+    <LineSymbolizer stroke-width="0.25" />
+    <PolygonSymbolizer fill="#ffff44" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = '1 Forest &amp; Woodland')</Filter>
+    <LineSymbolizer stroke-width="0.25" />
+    <PolygonSymbolizer fill="#168d35" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.25" />
+  </Rule>
+</Style>
 <Style name="vegetation" filter-mode="first">
   <Rule>
-    <LineSymbolizer stroke-width="1" stroke="#c0c0c0" />
-    <PolygonSymbolizer fill="rgba(0, 0, 0, 0)" />
+    <LineSymbolizer stroke="#000000" stroke-opacity="1" />
+    <PolygonSymbolizer fill-opacity="1" />
   </Rule>
 </Style>
 <Layer name="vegetation"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>vegetation</StyleName>  </Layer>
+    <StyleName>vegetation</StyleName>
+    <StyleName>vegetation-class</StyleName>
+    <StyleName>vegetation-macrogroup</StyleName>
+    <StyleName>vegetation-alliance</StyleName>  </Layer>
 
 </Map>

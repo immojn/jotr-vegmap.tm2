@@ -1,25 +1,25 @@
 _prefs: 
-  mapid: ryanjhodge.785af934
+  mapid: ryanjhodge.23f33aa8
   saveCenter: true
 _properties: {}
-attribution: ''
+attribution: National Park Service
 bounds: 
   - -180
   - -85.0511
   - 180
   - 85.0511
 center: 
-  - -116.1832
-  - 33.9771
-  - 12
-description: ''
-format: "png8:m=h"
+  - -116.1847
+  - 33.9406
+  - 14
+description: Joshua Tree National Park Vegetation Map
+format: "png8:m=h:c=32"
 interactivity_layer: vegetation
 layers: null
 maxzoom: 16
 minzoom: 11
-name: jotr-vegmap
-source: "mapbox:///ryanjhodge.vbowjvhy"
+name: Joshua Tree National Park Vegetation Map
+source: "mapbox:///ryanjhodge.wnfgk3xr"
 styles: 
   - style.mss
-template: "{{MapUnit_Na}}"
+template: "<b>Class:</b> {{class}}<br /><b>Macrogroup:</b> {{macrogroup}}<br /><b>Association:</b> {{mapunit_name}}"
