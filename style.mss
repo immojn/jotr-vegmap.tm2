@@ -33,6 +33,7 @@ Map {
   // Macrogroup //
   ::macrogroup {
     [zoom >=15][zoom <=18] {
+      line-width: 0.75;
 
       // 1 Forest & Woodland //
       [macrogroup = 'Intermountain Singleleaf Pinyon-Western Juniper Woodland'] {
@@ -76,12 +77,13 @@ Map {
   // Alliance & Association //
   ::alliance {
     [zoom >=19][zoom <=22] {
+      line-width: 1;
 
       // 1 Forest & Woodland //
       [mapunit_name = 'Singleleaf Pinyon / Muller Oak Woodland Association'] {
         polygon-fill:green
       }
-      [mapunit_name = 'Singleleaf Pinyon Woodland Alliance '] {
+      [mapunit_name = 'Singleleaf Pinyon Woodland Alliance'] {
         polygon-fill: green
       }
       [mapunit_name = 'Black Willow Woodland Alliance'] {
