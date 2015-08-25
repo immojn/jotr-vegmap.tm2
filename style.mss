@@ -32,7 +32,7 @@ Map {
   
   // Macrogroup //
   ::macrogroup {
-    [zoom >=15][zoom <=18] {
+    [zoom >=13][zoom <=18] {
       line-width: 0.75;
 
       // 1 Forest & Woodland //
